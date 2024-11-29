@@ -3,7 +3,17 @@ entries:
   httpbin:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-11-29T23:29:16.046317+09:00"
+    created: "2024-11-30T03:54:11.778535+09:00"
+    description: A Helm chart for Kubernetes
+    digest: 0afe5f352b02cb103b295696de5b0c34b61c2e05958e12c1458b3e28a6a6c33e
+    name: httpbin
+    type: application
+    urls:
+    - httpbin-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-11-30T03:54:11.778231+09:00"
     description: A Helm chart for Kubernetes
     digest: fec80b4bcfadf6581b44e94e9e57ae172369e3369d9a9d7c626d568b5d7a49aa
     name: httpbin
@@ -11,4 +21,4 @@ entries:
     urls:
     - httpbin-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-29T23:29:16.045724+09:00"
+generated: "2024-11-30T03:54:11.777568+09:00"
