@@ -121,3 +121,11 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+hosts: []
+
+gateway:
+  enabled: false
+
+virtualService:
+  enabled: false

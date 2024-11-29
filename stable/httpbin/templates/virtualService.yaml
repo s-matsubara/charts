@@ -1,0 +1,21 @@
+{{- if .Values.virtualService.enabled }}
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: {{ include "httpbin.fullname" . }}
+  labels:
+    {{- include "httpbin.labels" . | nindent 4 }}
+spec:
+  {{- with .Values.hosts }}
+  hosts:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  gateways:
+    - {{ include "httpbin.fullname" . }}
+  http:
+    - route:
+        - destination:
+            host: {{ include "httpbin.fullname" . }}.default.svc.cluster.local
+            port:
+              number: 80
+{{- end }}
