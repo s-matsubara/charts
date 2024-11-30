@@ -126,6 +126,8 @@ hosts: []
 
 gateway:
   enabled: false
+  selector:
+    istio: ingress
 
 virtualService:
   enabled: false

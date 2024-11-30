@@ -1,0 +1,14 @@
+version: 3
+
+tasks:
+  create:
+    cmds:
+      - task: package
+      - task: index
+      - echo "create done"
+
+  package:
+    cmd: helm package httpbin
+
+  index:
+    cmd: helm repo index .

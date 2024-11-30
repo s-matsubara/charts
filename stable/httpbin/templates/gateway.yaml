@@ -6,8 +6,10 @@ metadata:
   labels:
     {{- include "httpbin.labels" . | nindent 4 }}
 spec:
+  {{- with .Values.gateway.selector }}
   selector:
-    {{- include "httpbin.selectorLabels" . | nindent 4 }}
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
   servers:
     - port:
         number: 80
